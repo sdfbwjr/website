@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Reviews</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/solid.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div class="page-header">
+                    <h3><a href="slide.html"><i class="fas fa-home"></i></a></h3>
+                </div>
+                <div class="profile-pic"><img src="images/user.jpg"></div>
+                <div class="name">
+                    <h5>Benjamin</h5>
+                </div>
+            
+            </div>
+
+            <ul class="list-unstyled">
+
+                <li>
+                    <a href="profile.html">Profile</a>
+                </li>
+
+                <li>
+                    <a href="friends.html">Friends</a>
+                </li>
+
+                <li>
+                    <a href="reviews.html">Reviews</a>
+                </li>
+
+                <li>
+                    <a href="personalinfo.html">Personal Information</a>
+                </li>
+
+                
+
+                <li>
+                    <a href="orderhistory.html">Order History</a>
+                </li>
+
+                <li>
+                    <a href="recentactivity.html">Recent Activity</a>
+                </li>
+                
+                <li>
+                    <a href="index.html">Logout</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="menu-button">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-bars"></i>
+
+                    </button>
+                    <button class="btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+
+                </div>
+
+            </nav>
+
+
+        </div>
+
+        <div id="review-page">
+            <h1 id="review-head">Reviews</h1>
+        
+        
+            <div class="row">
+                <div class="col-4"><img src="images/topreview.jpg"></div>
+                <div class="col-8">
+                    <div id="review-desc">
+                        <h2>Tasty Burgers</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed, condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo tellus.</p>
+                    </div>
+                </div>
+        
+            </div>
+        
+        
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-6">
+                    <h3>Customer Service</h3>
+                    <h3>Presentation</h3>
+                    <h3>Quality</h3>
+                    <h3>Overall</h3>
+                </div>
+                <div class="col-2">
+                    <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></h3>
+                        <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i></h3>
+                            <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+                                <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star-half"></i></h3>
+                </div>
+        
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <div id="interactions">
+                        <h4 id="interaction-row"><i class="fas fa-heart"></i>&nbsp;32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fas fa-comments"></i>&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <h6 class="dropdown-header">Options</h6>
+                                <a class="dropdown-item" >Add to Favorites</a>
+                                <a class="dropdown-item" id="not-fav" >Remove from Favorites</a>
+                            </div>
+                        </div>
+                                
+                    </div>
+        
+                </div>
+                <div class="col-sm" >
+                    
+                </div>
+        
+            </div>
+        
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-1">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user" class="profile-photo-lg">
+        
+                </div>
+                <div class="col-4">
+                    <div id="reviewer-name">
+                        <h5>Addison Thomas</h5>
+                    </div>
+        
+                </div>
+                <div class="col-3">
+                    <div id="comment-date">
+                        <h5>3 days ago</h5>
+                    </div>
+        
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <div id="review-comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed,
+                            condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo
+                            tellus.</p>
+                    </div>
+                </div>
+        
+            </div>
+        
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <h4><i class="fas fa-comment-dots"></i>&nbsp;&nbsp;&nbsp;2 More Comments</h3>
+                </div>
+        
+            </div>
+        
+            <hr />
+
+
+            <!---------------------------------------------------------------------------------------->
+
+
+            <div class="row">
+                <div class="col-4"><img src="images/topreview2.jpg"></div>
+                <div class="col-8">
+                    <div id="review-desc">
+                        <h2>The Tower</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed, condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo tellus.</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-6">
+                    <h3>Customer Service</h3>
+                    <h3>Presentation</h3>
+                    <h3>Quality</h3>
+                    <h3>Overall</h3>
+                </div>
+                <div class="col-2">
+                    <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </h3>
+                        <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i></h3>
+                            <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+                                <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star-half"></i></h3>
+                </div>
+            
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <div id="interactions">
+                        <h4 id="interaction-row"><i class="fas fa-heart"></i>&nbsp;32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fas fa-comments"></i>&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <h6 class="dropdown-header">Options</h6>
+                                <a class="dropdown-item">Add to Favorites</a>
+                                <a class="dropdown-item" id="not-fav">Remove from Favorites</a>
+                            </div>
+                        </div>
+                    
+                    </div>
+            
+                </div>
+                <div class="col-sm">
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-1">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user" class="profile-photo-lg">
+            
+                </div>
+                <div class="col-4">
+                    <div id="reviewer-name">
+                        <h5>Addison Thomas</h5>
+                    </div>
+            
+                </div>
+                <div class="col-3">
+                    <div id="comment-date">
+                        <h5>3 days ago</h5>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <div id="review-comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed,
+                            condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo
+                            tellus.</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <h4><i class="fas fa-comment-dots"></i>&nbsp;&nbsp;&nbsp;7 More Comments</h3>
+                </div>
+            
+            </div>
+            <hr/>
+
+            <!---------------------------------------------------------------------------------------->
+        
+            <div class="row">
+                <div class="col-4"><img src="images/topreview3.jpg"></div>
+                <div class="col-8">
+                    <div id="review-desc">
+                        <h2>Baytree Restaurant</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed, condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo tellus.</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-6">
+                    <h3>Customer Service</h3>
+                    <h3>Presentation</h3>
+                    <h3>Quality</h3>
+                    <h3>Overall</h3>
+                </div>
+                <div class="col-2">
+                    <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </h3>
+                        <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i></h3>
+                            <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+                                <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star-half"></i></h3>
+                </div>
+            
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <div id="interactions">
+                        <h4 id="interaction-row"><i class="fas fa-heart"></i>&nbsp;32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fas fa-comments"></i>&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <h6 class="dropdown-header">Options</h6>
+                                <a class="dropdown-item">Add to Favorites</a>
+                                <a class="dropdown-item" id="not-fav">Remove from Favorites</a>
+                            </div>
+                        </div>
+                    
+                    </div>
+            
+                </div>
+                <div class="col-sm">
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-1">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user" class="profile-photo-lg">
+            
+                </div>
+                <div class="col-4">
+                    <div id="reviewer-name">
+                        <h5>Addison Thomas</h5>
+                    </div>
+            
+                </div>
+                <div class="col-3">
+                    <div id="comment-date">
+                        <h5>3 days ago</h5>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <div id="review-comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed,
+                            condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo
+                            tellus.</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <h4><i class="fas fa-comment-dots"></i>&nbsp;&nbsp;&nbsp;7 More Comments</h3>
+                </div>
+            
+            </div>
+            <hr/>
+            <!---------------------------------------------------------------------------------------->
+            <!-----LATEST REVIEWS-->
+            
+            
+            
+            <div class="row">
+                <div class="col-4"><img src="images/latestreview1.png"></div>
+                <div class="col-8">
+                    <div id="review-desc">
+                        <h2>Domino's</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed, condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo tellus.</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-6">
+                    <h3>Customer Service</h3>
+                    <h3>Presentation</h3>
+                    <h3>Quality</h3>
+                    <h3>Overall</h3>
+                </div>
+                <div class="col-2">
+                    <h4><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </h3>
+                        <h4><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i></h3>
+                            <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i></h3>
+                                <h4><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star-half"></i></h3>
+                </div>
+            
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <div id="interactions">
+                        <h4 id="interaction-row"><i class="fas fa-heart"></i>&nbsp;32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fas fa-comments"></i>&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <h6 class="dropdown-header">Options</h6>
+                                <a class="dropdown-item">Add to Favorites</a>
+                                <a class="dropdown-item" id="not-fav">Remove from Favorites</a>
+                            </div>
+                        </div>
+                    
+                    </div>
+            
+                </div>
+                <div class="col-sm">
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-1">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user" class="profile-photo-lg">
+            
+                </div>
+                <div class="col-4">
+                    <div id="reviewer-name">
+                        <h5>Addison Thomas</h5>
+                    </div>
+            
+                </div>
+                <div class="col-3">
+                    <div id="comment-date">
+                        <h5>3 days ago</h5>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <div id="review-comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed,
+                            condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo
+                            tellus.</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <h4><i class="fas fa-comment-dots"></i>&nbsp;&nbsp;&nbsp;2 More Comments</h3>
+                </div>
+            
+            </div>
+            
+            <hr />
+            
+            
+            <!---------------------------------------------------------------------------------------->
+            
+            
+            <div class="row">
+                <div class="col-4"><img src="images/latestreview2.png"></div>
+                <div class="col-8">
+                    <div id="review-desc">
+                        <h2>Subway</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed, condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo tellus.</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-6">
+                    <h3>Customer Service</h3>
+                    <h3>Presentation</h3>
+                    <h3>Quality</h3>
+                    <h3>Overall</h3>
+                </div>
+                <div class="col-2">
+                    <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </h3>
+                        <h4><i
+                                class="fas fa-star"></i></h3>
+                            <h4><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+                                <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star-half"></i></h3>
+                </div>
+            
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <div id="interactions">
+                        <h4 id="interaction-row"><i class="fas fa-heart"></i>&nbsp;32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fas fa-comments"></i>&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <h6 class="dropdown-header">Options</h6>
+                                <a class="dropdown-item">Add to Favorites</a>
+                                <a class="dropdown-item" id="not-fav">Remove from Favorites</a>
+                            </div>
+                        </div>
+                    
+                    </div>
+            
+                </div>
+                <div class="col-sm">
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-1">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user" class="profile-photo-lg">
+            
+                </div>
+                <div class="col-4">
+                    <div id="reviewer-name">
+                        <h5>Addison Thomas</h5>
+                    </div>
+            
+                </div>
+                <div class="col-3">
+                    <div id="comment-date">
+                        <h5>3 days ago</h5>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <div id="review-comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed,
+                            condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo
+                            tellus.</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <h4><i class="fas fa-comment-dots"></i>&nbsp;&nbsp;&nbsp;7 More Comments</h3>
+                </div>
+            
+            </div>
+            <hr />
+            
+            <!---------------------------------------------------------------------------------------->
+            
+            <div class="row">
+                <div class="col-4"><img src="images/latestreview3.png"></div>
+                <div class="col-8">
+                    <div id="review-desc">
+                        <h2>Delice Perle</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed, condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo tellus.</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-6">
+                    <h3>Customer Service</h3>
+                    <h3>Presentation</h3>
+                    <h3>Quality</h3>
+                    <h3>Overall</h3>
+                </div>
+                <div class="col-2">
+                    <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </h3>
+                        <h4></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i></h3>
+                            <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i></h3>
+                                <h4><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star-half"></i></h3>
+                </div>
+            
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <div id="interactions">
+                        <h4 id="interaction-row"><i class="fas fa-heart"></i>&nbsp;32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fas fa-comments"></i>&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <h6 class="dropdown-header">Options</h6>
+                                <a class="dropdown-item">Add to Favorites</a>
+                                <a class="dropdown-item" id="not-fav">Remove from Favorites</a>
+                            </div>
+                        </div>
+                    
+                    </div>
+            
+                </div>
+                <div class="col-sm">
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-1">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user" class="profile-photo-lg">
+            
+                </div>
+                <div class="col-4">
+                    <div id="reviewer-name">
+                        <h5>Addison Thomas</h5>
+                    </div>
+            
+                </div>
+                <div class="col-3">
+                    <div id="comment-date">
+                        <h5>3 days ago</h5>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <div id="review-comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem sem, placerat sit amet leo
+                            sed,
+                            condimentum
+                            faucibus odio. Donec faucibus quis dui et lacinia. Vestibulum congue nulla tellus, at vehicula purus
+                            sodales quis.
+                            Proin
+                            faucibus augue sed justo ullamcorper rhoncus. Maecenas vulputate sagittis turpis a condimentum. Ut
+                            leo
+                            tellus.</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <h4><i class="fas fa-comment-dots"></i>&nbsp;&nbsp;&nbsp;7 More Comments</h3>
+                </div>
+            
+            </div>
+            <hr />
+            <!---------------------------------------------------------------------------------------->
+        
+        
+        </div>
+
+        
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
