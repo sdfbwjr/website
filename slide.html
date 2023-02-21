@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="styles/restaurant.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<title>Home</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color:#222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 15%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+    .material-icons {
+        color: white;
+    }
+
+        .material-icons:hover {
+            opacity: 50%;
+            transition: 0.4s;
+        }
+
+    .accdiv {
+        z-index: 100000;
+        right: .25%;
+        top: 5%;
+        display: none;
+        position: absolute;
+    }
+
+    .cartdrp {
+        z-index: 100000;
+        right: .25%;
+        top: 5%;
+        display: none;
+        position: absolute;
+    }
+
+    .mapdrp {
+        background-color: black;
+        width: 40%;
+        height: 35%;
+        z-index: 100000;
+        left: .5%;
+        top: 6%;
+        display: none;
+        position: absolute;
+    }
+
+    .toacc {
+        border: none;
+        border-top: 1px solid black;
+        background-color: white;
+        align-content: center;
+        width: 375px;
+        height: 40px;
+    }
+
+    .cartdrp {
+        z-index: 100000;
+        right: .25%;
+        top: 5%;
+        display: none;
+        position: absolute;
+        background-color: white;
+        width: 375px;
+        height: 700px;
+    }
+
+    .check {
+        width: 100%
+    }
+
+    .cart-content {
+        padding-top: 1%;
+        width: 100%;
+        height: 33%;
+    }
+
+    .cart-image {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+</style>
+</head>
+<body>
+    <header style="background-color: black">
+        <span>
+            <button type="button" onclick="location.href='slide.html'" style="background-color: black; border: none; color: white; float: left; margin-right: .5%"><i class="material-icons">home</i></button>
+            <button type="button" style="background-color: black; border: none; color: white" id="mapbtn"><i class="material-icons">location_on</i></button>
+            <div class="mapdrp">
+                <img src="Images/mapdrop.png" style="width: 99.8%; height: 99.5%">
+            </div>
+        </span>
+        <div class="header-icons">
+            <button type="button" style="background-color: black; border: none"><i class="material-icons" id="cartbtn">shopping_cart</i></button>
+            <div class="cartdrp" id="cartdrp">
+                <div style="width: 100%; height: 100%">
+                    <div class="cart-content">
+                        <img src="Images/cafe-latte-recipe.jpg" class="cart-image">
+                        <p style="color: black; padding-left: 55%; margin: 0px">Latte</p>
+                        <p style="float: right; color: black; padding-top: 50%; padding-right: 2%; margin: 0px"><button style="border-radius: 10px; border: 1px solid black">-</button>$5.55</p>
+                    </div>
+                    <div class="cart-content">
+                        <img src="Images/green-tuna-salad.jpg" class="cart-image">
+                        <p style="color: black; padding-left: 55%; margin: 0px">Green Salad</p>
+                        <p style="float: right; color: black; padding-top: 50%; padding-right: 2%; margin: 0px"><button style="border-radius: 10px; border: 1px solid black">-</button>$10.50</p>
+                    </div>
+                    <div class="cart-content">
+                        <img src="Images/hamburger.jpg" class="cart-image">
+                        <p style="color: black ; padding-left: 55%; margin: 0px">Hamburger</p>
+                        <p style="float: right; color: black; padding-top: 50%; padding-right: 2%; margin: 0px"><button style="border-radius: 10px; border: 1px solid black">-</button>$12</p>
+                    </div>
+                </div>
+                <div class="check">
+                    <button type="submit" onclick="location.href='cart.html'" class="toacc">Checkout</button>
+                </div>
+            </div>
+            <button type="button" style="background-color: black; border: none" id="accbut"><i class="material-icons">account_box</i></button>
+            <div class="accdiv" id="accdrp">
+                <img src="images/ben-app.png" alt="account image">
+                <form action="profile.html" method="post" style:"margine-Right: -1%">
+                    <button type="submit" class="toacc">go to profile</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="BAKER & SPICE_files/f31dc25831034786c595bea2d7b89638.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="BAKER & SPICE_files/c099e2f7b4b9afd0bd7eead7a9b051b7.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="BAKER & SPICE_files/91c650481624026d598e56ffce427123.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="BAKER & SPICE_files/7d54de00666bc320d2442eb16b9468ec.jpg" style="width:100%">
+        </div>
+
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+</body>
+
+
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    * {box-sizing: border-box;}
+    
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:#222;
+    }
+    
+    .topnav {
+      overflow: hidden;
+      background-color: #e9e9e9;
+    }
+    
+    .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .topnav a.active {
+      background-color: #2196F3;
+      color: white;
+    }
+    
+     .topnav .search-container {
+      float: left;
+    } 
+    
+    .topnav input[type=text] {
+      padding: 6px;
+      margin-top: 8px;
+      font-size: 17px;
+      border: none;
+    }
+    
+    .topnav .search-container button {
+      float: right;
+      padding: 6px 10px;
+      margin-top: 8px;
+      margin-right: 16px;
+      background: #ddd;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .topnav .search-container button:hover {
+      background: #ccc;
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav .search-container {
+        float: none;
+      }
+      .topnav a, .topnav input[type=text], .topnav .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+      }
+      .topnav input[type=text] {
+        border: 1px solid #ccc;  
+      }
+    }
+    </style>
+    </head>
+<body>
+
+
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 90%;
+            background: #f1f1f1;
+        }
+
+        form.example button {
+            float: left;
+            width: 10%;
+            padding: 10px;
+            background: #cdcbcb;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+            form.example button:hover {
+                background: #a09d9d;
+            }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+    <form class="example">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+    <script>
+        var cartbtn = document.getElementById("cartbtn");
+        var cartdrp = document.getElementsByClassName("cartdrp");
+
+        var accbut = document.getElementById("accbut");
+        var accdrp = document.getElementsByClassName("accdiv");
+
+        var mapbtn = document.getElementById("mapbtn");
+        var mapdrp = document.getElementsByClassName("mapdrp");
+
+        mapbtn.onclick = function () {
+            accdrp[0].style.display = "none";
+            cartdrp[0].style.display = "none";
+            if (mapdrp[0].style.display == "inline-block") {
+                mapdrp[0].style.display = "none";
+            }
+            else {
+                mapdrp[0].style.display = "inline-block";
+            }
+        }
+
+        cartbtn.onclick = function () {
+            accdrp[0].style.display = "none";
+            mapdrp[0].style.display = "none";
+            if (cartdrp[0].style.display == "inline-block") {
+                cartdrp[0].style.display = "none";
+            }
+            else {
+                cartdrp[0].style.display = "inline-block";
+            }
+        }
+
+        accbut.onclick = function () {
+            cartdrp[0].style.display = "none";
+            mapdrp[0].style.display = "none";
+            if (accdrp[0].style.display == "inline-block") {
+                accdrp[0].style.display = "none";
+            }
+            else {
+                accdrp[0].style.display = "inline-block";
+            }
+        }
+    </script>
+
+</body>
+
+</head>
+
+<style>
+    .btn-group button {
+      background-color: #ca1305; /* Green background */
+      border: 1px solid rgb(173, 24, 5); /* Green border */
+      color:white; /* White text */
+      padding: 10px 24px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      float: left; /* Float the buttons side by side */
+    }
+    
+    /* Clear floats (clearfix hack) */
+    .btn-group:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    .btn-group button:not(:last-child) {
+      border-right: none; /* Prevent double borders */
+    }
+    
+    /* Add a background color on hover */
+    .btn-group button:hover {
+      background-color: #c01509;
+    }
+    </style>
+
+
+<div class="btn-group" style="width:100%">
+    <button style="width:33.3%" onclick="document.location='slide2.html'">Pick up</button>
+    <button style="width:33.3%" onclick="document.location='slide2.html'">Delivery</button>
+    <button style="width:33.3%" onclick="document.location='slide2.html'">Dine in</button>
+</div>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  </style>
+
+<div class="row">
+  <div class="column">
+  <a href="slide2.html">
+    <img alt="food" src="BAKER &amp; SPICE_files/download.jpeg" style="width:100%">
+    </a>
+  </div>
+  
+  <div class="column">
+    <a href="slide2.html">
+    <img alt="food" src="BAKER &amp; SPICE_files/depositphotos_60867841-stock-photo-delicious-chocolate-cake-on-plate.jpg" style="width:100%">
+    </a>
+  </div>
+  
+  
+  <div class="column">
+     <a href="slide2.html">
+    <img  alt="food" src="BAKER &amp; SPICE_files/1530625100526.jpeg"style="width:100%">
+    </a>
+  </div>
+ 
+  
+  <div class="column">
+    <a href="slide2.html">
+    <img  alt="food" src="BAKER &amp; SPICE_files/07174953-southside-pizza_cover_2000x1200.jpg"style="width:100%">
+    </a>
+  </div>
+  
+  <div class="column">
+    <a href="slide2.html">
+      <img alt="food" src="BAKER &amp; SPICE_files/beer-main-0.jpg" style="width:100%">
+      </a>
+  </div>
+    
+    
+  </div>
+
+
+  
+
+</html>

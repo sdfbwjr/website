@@ -1,0 +1,350 @@
+<html>
+    <head>
+        <title>Burger Menu Page</title>
+        <link type="text/css" rel="stylesheet" href="styles/restaurant.css">
+        <script>
+            function openMenu(event, tabID, menuID){
+                let i, menuTab, menuItems;
+
+                menuItems = document.getElementsByClassName("cards");
+                menuTab = document.getElementsByClassName("menu-tab");
+
+                for(i=0; i< menuItems.length; i++){
+
+                    if(tabID != "all"){
+                        menuItems[i].style.display = "none"; 
+                    }
+                    else{
+                        menuItems[i].style.display = "block"; 
+                    }
+                }
+                
+                for(i=0; i<menuTab.length; i++){
+                    menuTab[i].className = menuTab[i].className.replace(" selected", "");
+                }
+                
+                document.getElementById(menuID).style.display = "block";
+                //document.getElementById(tabID).className = "menu-tab selected";
+            }
+        </script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Burger King</title>
+    </head>
+
+    <body>
+        <header style="padding-top: 1px">
+            <span>
+                <button type="submit" onclick="location.href='slide.html'" style="background-color: black; border: none; color: white; float: left; margin-right: .5%"><i class="material-icons">home</i></button>
+                <button type="button" style="background-color: black; border: none; color: white" id="mapbtn"><i class="material-icons">location_on</i></button>
+                <div class="mapdrp">
+                    <img src="Images/mapdrop.png" style="width: 99.8%; height: 99.5%">
+                </div>
+            </span>
+            <div class="header-icons">
+                <button type="button" style="background-color: black; border: none"><i class="material-icons" id="cartbtn">shopping_cart</i></button>
+                <div class="cartdrp" id="cartdrp">
+                    <div>
+                        <div class="cart-content">
+                            <img src="Images/cafe-latte-recipe.jpg" class="cart-image">
+                            <p style="color: black; padding-left: 55%">Latte</p>
+                            <p style="float: right; color: black; padding-top: 30%; padding-right: 2%"><button style="border-radius: 10px; border: 1px solid black">-</button>$5.55</p>
+                        </div>
+                        <div class="cart-content">
+                            <img src="Images/green-tuna-salad.jpg" class="cart-image">
+                            <p style="color: black; padding-left: 55%">Green Salad</p>
+                            <p style="float: right; color: black; padding-top: 30%; padding-right: 2%"><button style="border-radius: 10px; border: 1px solid black">-</button>$10.50</p>
+                        </div>
+                        <div class="cart-content">
+                            <img src="Images/hamburger.jpg" class="cart-image">
+                            <p style="color: black ; padding-left: 55%">Hamburger</p>
+                            <p style="float: right; color: black; padding-top: 30%; padding-right: 2%"><button style="border-radius: 10px; border: 1px solid black">-</button>$12</p>
+                        </div>
+                    </div>
+                    <div class="check">
+                        <form action="cart.html" method="post" style:"margine-Right: -1%">
+                            <button type="submit" class="toacc">Checkout</button>
+                        </form>
+                    </div>
+                </div>
+                <button type="button" style="background-color: black; border: none" id="accbut"><i class="material-icons">account_box</i></button>
+                <div class="accdiv" id="accdrp">
+                    <img src="images/ben-app.png" alt="account image">
+                    <form action="profile.html" method="post" style:"margine-Right: -1%">
+                        <button type="submit" class="toacc">go to profile</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <div class="wallpaper" style="background-repeat: no-repeat; background-size: cover; background-blend-mode: darken; background-image: url('Images/hamburger.jpg'); background-position: center; height: 20em;">
+            <h1>Burger King</h1>
+        </div>
+
+        <div class="content">
+            <div class="leftsidebar">
+                <nav>
+                    <h2 class="menu-tab selected" id="all"><a href="javascript: void(0)" onclick="openMenu(event, 'all', 'all');">All Items</a></h2>
+
+                    <h2 class="menu-tab" id="hot-drinks"><a href="javascript: void(0)" onclick="openMenu(event, 'hot-drinks', 'hot-drinks-menu');">Hot Drinks</a></h2>
+                    <ul>
+                        <li>Latte</li>
+                        <li>Hot cappuccino</li>
+                    </ul>
+                    <h2 class="menu-tab" id="breakfast"><a href="javascript: void(0)" onclick="openMenu(event, 'breakfast', 'breakfast-menu');">Breakfast Menu</a></h2>
+                    <ul>
+                        <li>Green salad</li>
+                        <li>Veggie wrap</li>
+                    </ul>
+                    <h2 class="menu-tab" id="lunch"><a href="javascript: void(0)" onclick="openMenu(event, 'lunch', 'lunch-menu');">Lunch Menu</a></h2>
+                    <ul>
+                        <li>Hamburger</li>
+                        <li>Cheeseburger</li>
+                    </ul>
+                    <h2 class="menu-tab" id="dinner"><a href="javascript: void(0)" onclick="openMenu(event, 'dinner', 'dinner-menu');">Dinner Menu</a></h2>
+                    <ul>
+                        <li>King chicken</li>
+                        <li>Chicken burger</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="rightsidebar">
+                <div class="cards" id="hot-drinks-menu">
+                    <h2>Hot Drinks</h2>
+                    <div class="card " id="hot-choco">
+                        <div class="item-picture" style="background-image: url('Images/Cafe-Latte-Recipe.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Latte</h2>
+                            <p>Made with espresso and hot steamed milk.</p>
+                            <div id="price">
+                                $5.55
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="coffee">
+                        <div class="item-picture" style="background-image: url('Images/coffee_cappuccino.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Hot Cappuccino</h2>
+                            <p>Espresso-based coffee, traditionally prepared with steamed milk foam.</p>
+                            <div id="price">
+                                $8.99
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards" id="breakfast-menu">
+                    <h2>Breakfast Menu</h2>
+                    <div class="card " id="salad">
+                        <div class="item-picture" style="background-image: url('Images/green-tuna-salad.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Green Salad</h2>
+                            <p>A classy spinach salad full of texture and flavor contrast.</p>
+                            <div id="price">
+                                $10.50
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="sandwich">
+                        <div class="item-picture" style="background-image: url('Images/veggiewrap.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Veggie Wrap</h2>
+                            <p>With smokey black bean and roasted sweet potatoes.</p>
+                            <div id="price">
+                                $13.50
+                            </div>
+                            <div id="quantity">
+                                <button style="height: 25px; float: left" id="more">v more</button>
+                                <!-- The Modal -->
+                                <div class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+
+                                        <div class="modal-header">
+
+                                            <span class="close">&times;</span>
+                                            <img src="Images/veggiewrap.jpg" style="width: 100%; height: 40%">
+
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <h3 style="color: black">Veggie Wrap</h3>
+                                            <h4 style="color: black">Size</h4>
+                                            <label for="small" style="color: black">Small</label>
+                                            <input type="radio" name="small">
+
+                                            <label for="med" style="color: black">Medium</label>
+                                            <input type="radio" name="med">
+
+                                            <label for="large" style="color: black">Large</label>
+                                            <input type="radio" name="large">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards" id="lunch-menu">
+                    <h2>Lunch Menu</h2>
+                    <div class="card " id="pep-pizza">
+                        <div class="item-picture" style="background-image: url('Images/hamburger.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Hamburger</h2>
+                            <p>Served with cheese, lettuce, tomato and onion.</p>
+                            <div id="price">
+                                $12
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="cheese-pizza">
+                        <div class="item-picture" style="background-image: url('Images/green-cheeseburger.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Cheeseburger</h2>
+                            <p>Seerved with pickles, bacon and mayonnaise.</p>
+                            <div id="price">
+                                $15
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards" id="dinner-menu">
+                    <h2>Dinner Menu</h2>
+                    <div class="card " id="sweet-fries">
+                        <div class="item-picture" style="background-image: url('Images/king_chicken.png'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>King Chicken</h2>
+                            <p>Served with sweet and potato fries.</p>
+                            <div id="price">
+                                $16.50
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="chicken">
+                        <div class="item-picture" style="background-image: url('Images/chickenBurger.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                        <div class="item-info">
+                            <h2>Chicken Burger</h2>
+                            <p>Served with chicken wings, chicken breast and chicken tighs.</p>
+                            <div id="price">
+                                $17.99
+                            </div>
+                            <div id="quantity">
+                                <button id="add">+</button>
+                                <span id="count">0</span>
+                                <button id="subtract">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            var cartbtn = document.getElementById("cartbtn");
+            var cartdrp = document.getElementsByClassName("cartdrp");
+
+            var accbut = document.getElementById("accbut");
+            var accdrp = document.getElementsByClassName("accdiv");
+
+            var mapbtn = document.getElementById("mapbtn");
+            var mapdrp = document.getElementsByClassName("mapdrp");
+
+            var more = document.getElementById("more");
+            var spans = document.getElementsByClassName("close");
+            var modal = document.getElementsByClassName("modal");
+
+            // When the user clicks the button, open the modal
+            more.onclick = function () {
+                modal[0].style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            spans[0].onclick = function () {
+                modal[0].style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal[0]) {
+                    modal[0].style.display = "none";
+                }
+            }
+
+            mapbtn.onclick = function () {
+                accdrp[0].style.display = "none";
+                cartdrp[0].style.display = "none";
+                if (mapdrp[0].style.display == "inline-block") {
+                    mapdrp[0].style.display = "none";
+                }
+                else {
+                    mapdrp[0].style.display = "inline-block";
+                }
+            }
+
+            cartbtn.onclick = function () {
+                accdrp[0].style.display = "none";
+                mapdrp[0].style.display = "none";
+                if (cartdrp[0].style.display == "inline-block") {
+                    cartdrp[0].style.display = "none";
+                }
+                else {
+                    cartdrp[0].style.display = "inline-block";
+                }
+            }
+
+            accbut.onclick = function () {
+                cartdrp[0].style.display = "none";
+                mapdrp[0].style.display = "none";
+                if (accdrp[0].style.display == "inline-block") {
+                    accdrp[0].style.display = "none";
+                }
+                else {
+                    accdrp[0].style.display = "inline-block";
+                }
+            }
+        </script>
+    </body>
+</html>

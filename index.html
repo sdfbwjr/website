@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Signin</title>
+
+    <script>
+        function showPosition() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    window.location.href = "slide.html";
+                });
+            } else {
+                alert("Sorry, your browser does not support HTML5 geolocation.");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Background Image -->
+    <img class="bg" src="images/LandPage.jpg" alt="image of food">
+
+        <!-- div containing all buttons and text boxes -->
+        <div class="back">
+
+            <!-- div containing sign in text boxes, buttons, forgot pass, and create acc buttons -->
+            <div class="container">
+                <form action="slide.html" method="post" style:"margine-Right: -1%">
+                    <h1>Sign In</h1>
+
+                    <!-- Text box and label for email -->
+                    <label for="email"><b style="color: white">Email</b></label>
+                    <input type="email" placeholder="Enter Email" name="email" id="signin" required>
+
+                    <!-- text box and label for password -->
+                    <label for="psw"><b style="color: white">Password</b></label>
+                    <div>
+                        <input type="password" placeholder="Enter Password" name="psw" style="width: 95%" id="signin1" required>
+                        <div style="width: 5%; float: right; padding-top: 10px">
+                            <button type="button" style="float: right"><i class="material-icons" id="vis1">visibility</i></button>
+                        </div>
+                    </div>
+                    <!-- sign in button -->
+                    <button class="click" type="submit" id="login">Sign In</button>
+                </form>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+
+                <!-- create account button -->
+                <button class="accbut" type="button">Create Account?</button>
+
+                <!-- The Modal for creating account -->
+                <div class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+
+                            <span class="close">&times;</span>
+                            <h3>Register</h3>
+
+                        </div>
+
+                        <div class="modal-body">
+                            <form action="slide.html" method="post" style:"margine-Right: -1%">
+                                <label for="email2"><b style="color: black">Email</b></label>
+                                <input type="email" placeholder="Enter Email" name="email2" id="newacc" required>
+
+                                <label for="psw2"><b style="color: black">Password</b></label>
+                                <div>
+                                    <input type="password" placeholder="Enter Password" name="psw2" style="width: 95%" id="newacc1" required>
+                                    <div style="width: 5%; float: right; padding-top: 10px">
+                                        <button type="button" style="float: right"><i class="material-icons" id="vis2">visibility</i></button>
+                                    </div>
+                                </div>
+
+                                <label for="psw3"><b style="color: black">Confirm Password</b></label>
+                                <div>
+                                    <input type="password" placeholder="Re-Enter Password" name="psw3" style="width: 95%" id="newacc2" required>
+                                    <div style="width: 5%; float: right; padding-top: 10px">
+                                        <button type="button" style="float: right"><i class="material-icons" id="vis3">visibility</i></button>
+                                    </div>
+                                </div>
+
+                                <p>Note:</p>
+                                <p>-Password must be at least 6 characters long</p>
+                                <p>-Password must contain both letters and numbers</p>
+                                <p>-Password must contain at least one upper and lower case letter</p>
+
+                                <button class="click" type="submit" id="crtacc">Create Account</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="accbut" type="button" style="float:right">Forgot Password?</button>
+
+                <!-- The Modal -->
+                <div class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+
+                            <span class="close">&times;</span>
+                            <h3>Forgot Password?</h3>
+
+                        </div>
+
+                        <div class="modal-body">
+                            <form action="changePass.html" method="post" style:"margine-Right: -1%">
+
+                                <label for="email"><b style="color: black">Email</b></label>
+                                <input type="email" placeholder="Enter Email" name="email" id="mailres" required>
+                                <p>
+                                    An email with a link will be sent to your email to reset your password,
+                                    please follow the instructions in the email
+                                </p>
+                                <button class="click" type="submit" id="passres">Send Password Reset</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container" style="margin-top: 2%">
+
+                <h2>OR</h2>
+                <form action="slide.html" method="post" style:"margine-Right: -1%">
+                    <h1>Location</h1>
+
+                    <input type="text" placeholder="Enter Location" name="loc" id="loc" style="width: 95%" required>
+                    <div style="width: 5%; float: right; padding-top: 10px">
+                        <button type="button" onclick="showPosition()" style="float: right"><i class="material-icons" id="getloc">place</i></button>
+                    </div>
+                    <button class="click" type="submit" id="locsub">Find Resteraunts in Your Area</button>
+                </form>
+            </div>
+
+        </div>
+
+    <script>
+        // Get the modal
+        var modals = document.getElementsByClassName("modal");
+
+        // Get the button that opens the modal
+        var btns = document.getElementsByClassName("accbut");
+
+        // Get the <span> element that closes the modal
+        var spans = document.getElementsByClassName("close");
+
+        // Get the sign in input elements
+        var signin = document.getElementById("signin");
+        var signin1 = document.getElementById("signin1");
+
+        // Get the sign in button
+        var signbut = document.getElementById("login");
+
+        // Get the create account input elements
+        var newacc = document.getElementById("newacc");
+        var newacc1 = document.getElementById("newacc1");
+        var newacc2 = document.getElementById("newacc2");
+
+        // Get button for new account
+        var crtacc = document.getElementById("crtacc");
+
+        // Get input for password reset
+        var mailres = document.getElementById("mailres");
+
+        // Get button for password reset
+        var passres = document.getElementById("passres");
+
+        // Get input for location
+        var loc = document.getElementById("loc");
+
+        // Get button for location
+        var locsub = document.getElementById("locsub");
+
+        var vis1 = document.getElementById("vis1");
+        var vis2 = document.getElementById("vis2");
+        var vis3 = document.getElementById("vis3");
+
+        vis1.onclick = function () {
+            if (signin1.type == "password") {
+                signin1.type = "text";
+            }
+            else {
+                signin1.type = "password";
+            }
+        }
+
+        vis2.onclick = function () {
+            if (newacc1.type == "password") {
+                newacc1.type = "text";
+            }
+            else {
+                newacc1.type = "password";
+            }
+        }
+
+        vis3.onclick = function () {
+            if (newacc2.type == "password") {
+                newacc2.type = "text";
+            }
+            else {
+                newacc2.type = "password";
+            }
+        }
+
+        // When the user clicks the button, open the modal
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].onclick = function () {
+                modals[i].style.display = "block";
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        for (let i = 0; i < spans.length; i++) {
+            spans[i].onclick = function () {
+                modals[i].style.display = "none";
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modals[0]) {
+                modals[0].style.display = "none";
+            }
+
+            if (event.target == modals[1]) {
+                modals[1].style.display = "none";
+            }
+        }
+
+        signbut.onclick = function () {
+            signin.setAttribute("required");
+            signin1.setAttribute("required");
+            newacc.removeAttribute("required");
+            newacc1.removeAttribute("required");
+            newacc2.removeAttribute("required");
+            mailres.removeAttribute("required");
+            loc.removeAttribute("required");
+        }
+
+        crtacc.onclick = function () {
+            newacc.setAttribute("required");
+            newacc1.setAttribute("required");
+            newacc2.setAttribute("required");
+            signin.removeAttribute("required");
+            signin1.removeAttribute("required");
+            mailres.removeAttribute("required");
+            loc.removeAttribute("required");
+        }
+
+        passres.onclick = function () {
+            mailres.setAttribute("required");
+            signin.removeAttribute("required");
+            signin1.removeAttribute("required");
+            newacc.removeAttribute("required");
+            newacc1.removeAttribute("required");
+            newacc2.removeAttribute("required");
+            loc.removeAttribute("required");
+        }
+
+        locsub.onclick = function () {
+            loc.setAttribute("required");
+            signin.removeAttribute("required");
+            signin1.removeAttribute("required");
+            newacc.removeAttribute("required");
+            newacc1.removeAttribute("required");
+            newacc2.removeAttribute("required");
+            mailres.removeAttribute("required");
+        }
+    </script>
+
+</body>
+
+</html>

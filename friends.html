@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Friends</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/solid.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div class="page-header">
+                    <h3><a href="slide.html"><i class="fas fa-home"></i></a></h3>
+                </div>
+                <div class="profile-pic"><img src="images/user.jpg"></div>
+                <div class="name">
+                    <h5>Benjamin</h5>
+                </div>
+            
+            </div>
+            <ul class="list-unstyled">
+
+                <li>
+                    <a href="profile.html">Profile</a>
+                </li>
+
+                <li>
+                    <a href="friends.html">Friends</a>
+                </li>
+
+                <li>
+                    <a href="reviews.html">Reviews</a>
+                </li>
+                <li>
+                    <a href="personalinfo.html">Personal Information</a>
+                </li>
+                
+                <li>
+                    <a href="orderhistory.html">Order History</a>
+                </li>
+
+                <li>
+                    <a href="recentactivity.html">Recent Activity</a>
+                </li>
+
+                <li>
+                    <a href="index.html">Logout</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="menu-button">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-bars"></i>
+
+                    </button>
+                    <button class="btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+
+                </div>
+                
+            </nav>
+
+
+            
+
+        
+        
+            
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="people-nearby">
+                        <div class="quick-add">
+                            <div class="row">
+                                
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>Quick Add</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nearby-user">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user"
+                                        class="profile-photo-lg">
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>Sophia Page</h5>
+                                    <p>Recently Joined</p>
+                                    <p class="text-muted">22 Shared Reviews — 86% Affinity</p>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right"><span>Add Friend</span><span style="display:none">Request
+                                            Sent</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nearby-user">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user"
+                                        class="profile-photo-lg">
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>Emma Johnson</h5>
+                                    <p>In my contacts</p>
+                                    <p class="text-muted">5 Shared Reviews — 0% Affinity</p>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right"><span>Add Friend</span><span style="display:none">Request
+                                            Sent</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nearby-user">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="user"
+                                        class="profile-photo-lg">
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>Nora Wilson</h5>
+                                    <p>10+ Mutual friends</p>
+                                    <p class="text-muted">39 Shared Reviews — 67% Affinity</p>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right"><span>Add Friend</span><span style="display:none">Request
+                                            Sent</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nearby-user-end">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="user"
+                                        class="profile-photo-lg">
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>Diana Amber</h5>
+                                    <p>5+ Mutual friends</p>
+                                    <p class="text-muted">21 Shared Reviews — 90% Affinity</p>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right"><span>Add Friend</span><span style="display:none">Request
+                                            Sent</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="my-friendsd">
+                            <div class="row">
+                        
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>My Friends</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nearby-user">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user"
+                                        class="profile-photo-lg">
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>Addison Thomas</h5>
+                                    <p>12 Reviews</p>
+                                    <p class="text-muted">3 Shared Reviews — 50% Affinity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nearby-user">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="user"
+                                        class="profile-photo-lg">
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>Jonathon Thompson</h5>
+                                    <p>43 Reviews</p>
+                                    <p class="text-muted">12 Shared Reviews — 27% Affinity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nearby-user">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user"
+                                        class="profile-photo-lg">
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>Olivia Steward</h5>
+                                    <p>38 Reviews</p>
+                                    <p class="text-muted">30 Shared Reviews — 74% Affinity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nearby-user">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user"
+                                        class="profile-photo-lg">
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>Elena Foster</h5>
+                                    <p>3 Reviews</p>
+                                    <p class="text-muted">0 Shared Reviews — 0% Affinity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nearby-user">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="user"
+                                        class="profile-photo-lg">
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>Brian Walton</h5>
+                                    <p>78 Reviews</p>
+                                    <p class="text-muted">40 Shared Reviews — 34% Affinity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nearby-user">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user"
+                                        class="profile-photo-lg">
+                                </div>
+                                <div class="col-md-7 col-sm-7">
+                                    <h5>Cris Haris</h5>
+                                    <p>14 Reviews</p>
+                                    <p class="text-muted">6 Shared Reviews — 80% Affinity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+
+    <!-- not used for now-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+                $('button').on('click', function () {
+                    $(this).toggleClass('btn btn-primary pull-right').find('span').toggle();
+                });
+            });
+    </script>
+    <!-- not used for now-->
+
+
+
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
+
+</body>
+
+</html>

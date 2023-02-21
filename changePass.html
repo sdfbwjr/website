@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Change Password</title>
+
+</head>
+
+<body>
+    <!-- Background Image -->>
+    <img class="bg" src="images/LandPage.jpg" alt="image of food">
+
+        <div class="back">
+
+            <div class="container">
+
+                <h1>Create New Password</h1>
+
+                <label for="psw2"><b style="color: white">Password</b></label>
+                <div>
+                    <input type="password" placeholder="Enter Password" name="psw2" style="width: 95%" id="newacc1" required>
+                    <div style="width: 5%; float: right; padding-top: 10px">
+                        <button type="button" style="float: right"><i class="material-icons" id="vis2">visibility</i></button>
+                    </div>
+                </div>
+
+                <label for="psw3"><b style="color: white">Confirm Password</b></label>
+                <div>
+                    <input type="password" placeholder="Re-Enter Password" name="psw3" style="width: 95%" id="newacc2" required>
+                    <div style="width: 5%; float: right; padding-top: 10px">
+                        <button type="button" style="float: right"><i class="material-icons" id="vis3">visibility</i></button>
+                    </div>
+                </div>
+
+                <p style="color: white">Note:</p>
+                <p style="color: white">-Password must be at least 6 characters long</p>
+                <p style="color: white">-Password must contain both letters and numbers</p>
+                <p style="color: white">-Password must contain at least one upper and lower case letter</p>
+
+                <button class="click" type="submit" id="passChange">Change Password</button>
+
+                <!-- The Modal -->
+                <div class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+
+                            <p>Password Successfully Changed</p>
+
+                            <button class="click" type="button" onclick="location.href='index.html'">Go To Home Page</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementsByClassName("modal")[0];
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("passChange");
+
+        var vis2 = document.getElementById("vis2");
+        var vis3 = document.getElementById("vis3");
+
+        vis2.onclick = function () {
+            if (newacc1.type == "password") {
+                newacc1.type = "text";
+            }
+            else {
+                newacc1.type = "password";
+            }
+        }
+
+        vis3.onclick = function () {
+            if (newacc2.type == "password") {
+                newacc2.type = "text";
+            }
+            else {
+                newacc2.type = "password";
+            }
+        }
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

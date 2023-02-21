@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Order History</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/solid.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div class="page-header">
+                    <h3><a href="slide.html"><i class="fas fa-home"></i></a></h3>
+                </div>
+                <div class="profile-pic"><img src="images/user.jpg"></div>
+                <div class="name">
+                    <h5>Benjamin</h5>
+                </div>
+            
+            </div>
+
+            <ul class="list-unstyled">
+
+                <li>
+                    <a href="profile.html">Profile</a>
+                </li>
+
+                <li>
+                    <a href="friends.html">Friends</a>
+                </li>
+
+                <li>
+                    <a href="reviews.html">Reviews</a>
+                </li>
+
+                <li>
+                    <a href="personalinfo.html">Personal Information</a>
+                </li>
+
+                
+
+                <li>
+                    <a href="orderhistory.html">Order History</a>
+                </li>
+
+                <li>
+                    <a href="recentactivity.html">Recent Activity</a>
+                </li>
+                
+                <li>
+                    <a href="index.html">Logout</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="menu-button">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-bars"></i>
+
+                    </button>
+                    <button class="btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <div id="orders">
+            <h1 id="order-heading">Your Past Orders</h1>
+            <div class="row">
+                <div class="col-4"><img src="images/topreview.jpg"></div>
+                <div class="col-6">
+                    <div id="Order-desc">
+                        <h2>Tasty Burgers</h2>
+                        
+                            
+                            <p>1&nbsp;&nbsp;&nbsp;The Tasty Burger</p>
+                            <p>1&nbsp;&nbsp;&nbsp;Deluxe Crispy Chicken Burger</p>
+                            <p>1&nbsp;&nbsp;&nbsp;Montreal Style Poutine</p>
+                            <p>1&nbsp;&nbsp;&nbsp;Calamari</p>
+                        
+                            
+                        
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div id="order-options">
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <h6 class="dropdown-header">Options</h6>
+                                <a class="dropdown-item" id="not-fav">Create Review</a>
+                                <a class="dropdown-item">Reorder</a>
+                                <a class="dropdown-item">Get Help</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                        <p>$13.99</p>
+                        <p>$14.99</p>
+                        <p>$12.99</p>
+                        <p>$10.99</p>
+                    
+                    
+                </div>
+            
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-6">
+                    <h3>Order Number:</h3>
+                    <h3>Delivery Driver:</h3>
+                    <h3>Date:</h3>
+                    <h3>Total:</h3>
+                </div>
+                <div class="col-2">
+                    <h4>10101</h4>
+                        <h4>Hector B.</h4>
+                            <h4>11/20/20</h4>
+                                <h4>$68.85</h4>
+                </div>
+            
+            </div>
+        <hr />
+
+
+        <div class="row">
+            <div class="col-4"><img src="images/topreview2.jpg"></div>
+            <div class="col-6">
+                <div id="Order-desc">
+                    <h2>The Tower</h2>
+        
+        
+                    <p>2&nbsp;&nbsp;&nbsp;Original Bratwurst</p>
+                    <p>1&nbsp;&nbsp;&nbsp;Sauerbraten</p>
+                    <p>2&nbsp;&nbsp;&nbsp;Skirt Steak</p>
+                    <p>1&nbsp;&nbsp;&nbsp;Knödel</p>
+        
+        
+        
+                </div>
+            </div>
+            <div class="col-2">
+                <div id="order-options">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <h6 class="dropdown-header">Options</h6>
+                            <a class="dropdown-item" id="not-fav">Create Review</a>
+                            <a class="dropdown-item">Reorder</a>
+                            <a class="dropdown-item">Get Help</a>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <p>$22.99</p>
+                <p>$14.99</p>
+                <p>$42.99</p>
+                <p>$10.99</p>
+        
+        
+            </div>
+        
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-6">
+                <h3>Order Number:</h3>
+                <h3>Delivery Driver:</h3>
+                <h3>Date:</h3>
+                <h3>Total:</h3>
+            </div>
+            <div class="col-2">
+                <h4>54785</h4>
+                <h4>Pierre A.</h4>
+                <h4>11/16/20</h4>
+                <h4>$119.55</h4>
+            </div>
+        
+        </div>
+        <hr />
+
+
+
+        <div class="row">
+            <div class="col-4"><img src="images/topreview3.jpg"></div>
+            <div class="col-6">
+                <div id="Order-desc">
+                    <h2>Baytree Restaurant</h2>
+        
+        
+                    <p>1&nbsp;&nbsp;&nbsp;Sardine Tempura</p>
+                    <p>1&nbsp;&nbsp;&nbsp;Chocolate-raspberry mousse</p>
+                    <p>2&nbsp;&nbsp;&nbsp;Bouchées à la Reine</p>
+                    <p>1&nbsp;&nbsp;&nbsp;Rhubarb and Tarragon Pie</p>
+        
+        
+        
+                </div>
+            </div>
+            <div class="col-2">
+                <div id="order-options">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <h6 class="dropdown-header">Options</h6>
+                            <a class="dropdown-item" id="not-fav">Create Review</a>
+                            <a class="dropdown-item">Reorder</a>
+                            <a class="dropdown-item">Get Help</a>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <p>$37.99</p>
+                <p>$30.99</p>
+                <p>$40.99</p>
+                <p>$20.99</p>
+        
+        
+            </div>
+        
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-6">
+                <h3>Order Number:</h3>
+                <h3>Delivery Driver:</h3>
+                <h3>Date:</h3>
+                <h3>Total:</h3>
+            </div>
+            <div class="col-2">
+                <h4>20486</h4>
+                <h4>Mesut O.</h4>
+                <h4>11/12/20</h4>
+                <h4>$170.23</h4>
+            </div>
+        
+        </div>
+        <hr />
+
+
+
+        </div>
+
+
+
+        
+
+        
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
